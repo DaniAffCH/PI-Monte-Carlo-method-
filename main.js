@@ -1,10 +1,12 @@
-let widthCanvas = heightCanvas = 500;
-let radius = widthCanvas/2;
-var count = 0;
-var total = null;
-var dentro = 0;
+const widthCanvas = heightCanvas = 500;
+const radius = widthCanvas/2;
+const data = {
+    count : 0,
+    total : null,
+    dentro : 0
+}
 var output;
-condizioniIniziali =()=>{
+condizioniIniziali = () => {
     background(0);
     translate(radius, radius);
     stroke(255, 255, 255, 255);
@@ -21,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-    if(count < total && total != null){
+    if(data.count < data.total && data.total != null){
         //traslazione dei punti
         translate(radius, radius);
 
@@ -33,7 +35,7 @@ function draw() {
             if(distanza < radius){
                 //verde
                 stroke(0, 255, 0);
-                dentro++;
+                data.dentro++;
             } else {
                 //rosso
                 stroke(255, 0, 0);
@@ -43,10 +45,10 @@ function draw() {
         }
 
         for(c = 0; c<=2500; c++){
-            if(count < total){
-                count++;
+            if(data.count < data.total){
+                data.count++;
                 getRandomPoint();
-                myPi = 4 * (dentro/count);
+                myPi = 4 * (data.dentro/data.count);
                 output.html(myPi);
             }
             else{
@@ -54,16 +56,16 @@ function draw() {
             }
         }
     }
-    else if(total === null){
+    else if(data.total === null){
         //jquery per il recupero dati
-        var form = $("#inputForm");
-        var inputBox = $("#n");
-        var submitButton = $("#submitButton");
+        let inputBox = $("#n");
+        let submitButton = $("#submitButton");
         submitButton.click(function(){
-            total = $("#n").val();
+            data.total = !isNaN(inputBox.val()) ? inputBox.val() : location.reload();
+            submitButton.hide();
         });
     }
     //reset
     var resetButton = $("#resetButton");
-    resetButton.click(function(){ location.reload();});
+    resetButton.click(function(){location.reload();});
 }
