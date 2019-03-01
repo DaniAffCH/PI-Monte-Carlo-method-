@@ -6,7 +6,8 @@ const data = {
     dentro : 0
 }
 var output;
-condizioniIniziali = () => {
+function setup() {
+    createCanvas(widthCanvas, heightCanvas);
     background(0);
     translate(radius, radius);
     stroke(255, 255, 255, 255);
@@ -15,10 +16,6 @@ condizioniIniziali = () => {
     ellipse(0, 0, widthCanvas, heightCanvas);
     rectMode(CENTER);
     rect(0,0, widthCanvas, heightCanvas);
-}
-function setup() {
-    createCanvas(widthCanvas, heightCanvas);
-    condizioniIniziali();
     output = createElement("h2", "");
 }
 
@@ -27,7 +24,7 @@ function draw() {
         //traslazione dei punti
         translate(radius, radius);
 
-        getRandomPoint = () =>{
+        getRandomPoint = (count) =>{
             x = random(-radius, radius)
             y = random(-radius, radius)
             //teorema di pitagora per la distanza
@@ -40,14 +37,16 @@ function draw() {
                 //rosso
                 stroke(255, 0, 0);
             }
-            strokeWeight(1)
-            point(x, y);
+            strokeWeight(2);
+            if(count%100==0){
+                point(x, y);
+            }
         }
 
         for(c = 0; c<=2500; c++){
             if(data.count < data.total){
                 data.count++;
-                getRandomPoint();
+                getRandomPoint(data.count);
                 myPi = 4 * (data.dentro/data.count);
                 output.html(myPi);
             }
@@ -62,6 +61,9 @@ function draw() {
         let submitButton = $("#submitButton");
         submitButton.click(function(){
             data.total = !isNaN(inputBox.val()) ? inputBox.val() : location.reload();
+            if(data.total < 10000){
+                data.total = null;  
+            }
             submitButton.hide();
         });
     }
