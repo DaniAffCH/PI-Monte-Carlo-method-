@@ -21,9 +21,24 @@
            /,_)    /__)     /__)   /,_/
      '''''"""""'''""""""'''""""""''"""""'''''
 -->
+
 <head>
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=no, user-scalable=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="">
+    <!-- Autore Meta -->
+    <meta name="author" content="Daniele Affinita">
+    <!-- Titolo Meta -->
+    <meta name="title" content="Pi Day 2019">
+    <!-- Descrizione Meta -->
+    <meta name="description" content="Il 14 marzo di ogni anno si celebra il Pi Day!">
+    <!-- Keyword Meta  -->
+    <meta name="keywords" content="Pi Pigreco pi pigreco PI PIGRECO 3.14 3,14 14/03 14-03-2019 14-03">
+    <!-- Character Set Meta  -->
     <meta charset="UTF-8">
-    <title>pigreco</title>
+    <!-- Titolo -->
+    <title>PiGreco Day</title>
     <!-- Caricamento css locale -->
     <link href="main.css" rel="stylesheet" type="text/css">
     <!-- Caricamento librerie p5 -->
@@ -31,14 +46,51 @@
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
     <!-- Caricamento jquery CDN -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Caricamento js locale -->
     <script src="main.js" type="text/javascript"></script>
-    
 </head>
+<style>
+    canvas {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    @media (max-width: 375px) {
+        canvas {
+            margin-top: 450px;
+        }
+        h2 {
+            margin-top: -580px;
+            text-align: center !important;
+        }
+    }
+    
+    @media (min-width: 376px) and (max-width: 790px) {
+        canvas {
+            margin-top: 450px;
+        }
+        h2 {
+            margin-top: -580px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    
+    @media (min-width: 800px) {
+        canvas {
+            margin-top: 450px;
+        }
+        h2 {
+            margin-top: -580px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+</style>
 
 <body>
     <form class="box" id="inputForm">
