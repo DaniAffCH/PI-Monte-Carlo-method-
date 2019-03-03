@@ -19,8 +19,28 @@ function setup() {
     output = createElement("h2", "");
 }
 
+function stopall(e){
+    alert("Errore: "+e);
+    throw new Error(e);
+}
+
 function draw() {
-    if(data.count < data.total && data.total != null){
+
+    if(data.total === null){
+        //jquery per il recupero dati
+        let inputBox = $("#n");
+        let submitButton = $("#submitButton");
+        submitButton.click(function(){
+            data.total = !isNaN(inputBox.val()) ? inputBox.val() : location.reload();
+            if(data.total < 10000){
+                data.total = null;
+                stopall("Inserisci un valore di almeno 10000");
+            } 
+            submitButton.hide();
+        });
+    } 
+
+    else if(data.count < data.total && data.total != null){
         //traslazione dei punti
         translate(radius, radius);
 
@@ -54,18 +74,6 @@ function draw() {
                 break;
             }
         }
-    }
-    else if(data.total === null){
-        //jquery per il recupero dati
-        let inputBox = $("#n");
-        let submitButton = $("#submitButton");
-        submitButton.click(function(){
-            data.total = !isNaN(inputBox.val()) ? inputBox.val() : location.reload();
-            if(data.total < 10000){
-                data.total = null;  
-            }
-            submitButton.hide();
-        });
     }
     //reset
     var resetButton = $("#resetButton");

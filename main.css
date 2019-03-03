@@ -89,11 +89,7 @@ a{
     background: #2ecc71;
     transition: 0.50s;
 }
-/* canvas {
-    position: absolute;
-    top: 40%;
-    left: 39.5%;
-} */
+
 
 canvas {
     margin-left: auto;
