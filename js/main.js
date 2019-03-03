@@ -1,5 +1,6 @@
 const widthCanvas = heightCanvas = 500;
 const radius = widthCanvas/2;
+const multiplier = 100;
 const data = {
     count : 0,
     total : null,
@@ -31,10 +32,10 @@ function draw() {
         let inputBox = $("#n");
         let submitButton = $("#submitButton");
         submitButton.click(function(){
-            data.total = !isNaN(inputBox.val()) ? inputBox.val() : location.reload();
+            data.total = !isNaN(inputBox.val()) ? inputBox.val() * multiplier : location.reload();
             if(data.total < 10000){
                 data.total = null;
-                stopall("Inserisci un valore di almeno 10000");
+                stopall("Inserisci un valore di almeno 100");
             } 
             submitButton.hide();
         });
@@ -58,7 +59,7 @@ function draw() {
                 stroke(255, 0, 0);
             }
             strokeWeight(2);
-            if(count%100==0){
+            if(count%multiplier==0){
                 point(x, y);
             }
         }

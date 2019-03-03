@@ -112,6 +112,20 @@ a {
         margin-bottom: 40px;
     }
 }
+@media only screen and (min-width: 1200px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
 
 .box h3 {
     color: white;
