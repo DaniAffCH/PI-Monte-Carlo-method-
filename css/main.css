@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
-
+@import url('https://fonts.googleapis.com/css?family=Barlow|Major+Mono+Display');
 body {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
-    background-color: #1f2833;
+    background-color: #000000;
 }
 
 h2 {
-    color: rgb(0, 255, 0);
+    color: white;
     text-transform: uppercase;
-    font-family: 'Major Mono Display', monospace;
     font-weight: 500;
-    font-size: 350%;
     position: relative;
-    margin-top: 10% auto 10%;
+    margin-top: -120px;
     text-align: center;
 }
 
@@ -42,17 +41,151 @@ a {
     text-align: center;
 }
 
+@media only screen and (max-device-width: 400px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        margin-left: 10px;
+        position: absolute;
+        top: 5%;
+        /* transform: translate(-50%, -50%); */
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+    }
+}
+
+@media only screen and (min-device-width: 401px) and (max-device-width: 414px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        margin-left: 10px;
+        position: absolute;
+        top: 5%;
+        /* transform: translate(-50%, -50%); */
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 800px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 800px) and (orientation: landscape) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 801px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
+
+.box h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.75s;
+}
+
+.box input[type="text"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="button"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.75s;
+    cursor: pointer;
+}
+
+.box input[type="button"]:hover {
+    background: #2ecc71;
+    transition: 0.50s;
+}
 .title {
     margin: auto;
-    width: auto;
-    margin: 0 auto 10%;
+    width: 100%;
     height: 60%;
     align-self: center;
     padding: 3% 0% 3%;
+    margin-bottom: 10%;
 }
 
 .title span {
+    font-size: 200px;
     font-family: 'Major Mono Display', monospace;
+    margin: 20% 0% 20% 30%;
     letter-spacing: -20px;
 }
 
@@ -82,279 +215,4 @@ a {
         color: rgba(83,97,201, 0.3);
         position: relative;
     }
-}
-
-@media only screen and (max-device-width: 400px) {
-    .box {
-        display: inline-block;
-        width:40%;
-        padding: 40px;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin: 100px auto auto auto;
-    }
-
-    .title span {
-        font-size: 600%;
-        margin: 20% 0% 0% 5%;
-    }
-
-    .box input[type="text"] {
-        width: 120px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 150px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-size: 350%;
-        position: relative;
-        margin: 0 auto 10% auto;
-    }
-}
-
-@media only screen and (min-device-width: 401px) and (max-device-width: 414px) {
-    .box {
-        display: inline-block;
-        width:40%;
-        padding: 40px;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin: 100px auto auto auto;
-    }
-
-    .title span {
-        font-size: 650%;
-        margin: 20% 0% 0% 4%;
-    }
-
-    .box input[type="text"] {
-        width: 120px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 150px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-size: 350%;
-        position: relative;
-        margin: 0 auto 10% auto;
-    }
-}
-
-@media (min-width: 415px) and (max-width: 800px) {
-    .box {
-        display: inline-block;
-        width:50%;
-        padding: 40px;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin: 200px auto auto auto;
-    }
-
-    .title span {
-        font-size: 1000%;
-        margin: 20% 0% 0% 4%;
-    }
-
-    .box input[type="text"] {
-        width: 130px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 180px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-size: 350%;
-        position: relative;
-        margin: 0 auto 10% auto;
-    }
-}
-
-@media (min-width: 401px) and (max-width: 800px) and (orientation: landscape) {
-    .box {
-        width: 30%;
-        padding: 40px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin-bottom: 40px;
-    }
-
-    .title span {
-        font-size: 850%;
-        margin: 20% 0% 0% 12%;
-    }
-
-    .box input[type="text"] {
-        width: 120px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 175px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-size: 350%;
-        position: relative;
-        margin: 0 auto 10% auto;
-    }
-}
-
-@media (min-width: 801px) {
-    .box {
-        width: 30%;
-        padding: 40px;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin-top: 160px;
-    }
-
-    .title span {
-        font-size: 1100%;
-        margin: 20% 0% 15% 7%;
-    }
-
-    .box input[type="text"] {
-        width: 140px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 200px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-size: 350%;
-        position: relative;
-        margin: 0 auto 10% auto;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .box {
-        width: 20%;
-        height: 22%;
-        padding: 40px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(197,198,199, 0.3);
-        text-align: center;
-        border-radius: 100px;
-        margin: 130px auto 20px auto;
-    }
-
-    .title span {
-        font-size: 1900%;
-        margin: 5% 0% 0% 17%;
-    }
-
-    .box input[type="text"] {
-        width: 140px;
-    }
-
-    .box input[type="text"]:focus {
-        width: 200px;
-    }
-
-    h2 {
-        color: rgb(0, 255, 0);
-        text-transform: uppercase;
-        font-family: 'Major Mono Display', monospace;
-        font-weight: 500;
-        font-size: 250%;
-        position: relative;
-        margin: 10% auto 100px;
-        border-bottom: 500px;
-        padding-bottom: 500px;
-        text-align: center;
-    }
-
-}
-
-.box h3 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.box input[type="text"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding: 14px 10px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.75s;
-}
-
-.box input[type="text"]:focus {
-    border-color: #66fcf1;
-}
-
-.box input[type="button"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.75s;
-    cursor: pointer;
-}
-
-.box input[type="button"]:hover {
-    background: #2ecc71;
-    transition: 0.50s;
 }
