@@ -9,7 +9,7 @@ const data = {
 var output;
 function setup() {
     createCanvas(widthCanvas, heightCanvas);
-    background(0);
+    background(31,40,51);
     translate(radius, radius);
     stroke(255, 255, 255, 255);
     strokeWeight(4)
@@ -52,7 +52,7 @@ function draw() {
             distanza = sqrt(pow(x, 2)+pow(y, 2));
             if(distanza < radius){
                 //verde
-                stroke(0, 255, 0);
+                stroke(0,255,0);
                 data.dentro++;
             } else {
                 //rosso
