@@ -9,7 +9,7 @@ const data = {
 var output;
 function setup() {
     createCanvas(widthCanvas, heightCanvas);
-    background(0);
+    background(31,40,51);
     translate(radius, radius);
     stroke(255, 255, 255, 255);
     strokeWeight(4)
