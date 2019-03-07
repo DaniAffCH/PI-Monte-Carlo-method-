@@ -41,6 +41,7 @@
     <title>PiGreco Day</title>
     <!-- Caricamento css locale -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/canvas.css" rel="stylesheet" type="text/css">
     <!-- Caricamento librerie p5 -->
     <script src="libraries/p5.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
@@ -49,18 +50,18 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Caricamento js locale -->
     <script src="js/main.js" type="text/javascript"></script>
-    <link href="css/canvas.css" rel="stylesheet" type="text/css">
 </head>
-
 
 <body>
     <div class="title">
-        <span id="text1">
-            Pi
-        </span>
-        <span id="text2">
-            Day
-        </span>
+        <div class="container">
+            <span id="text1">
+                Pi
+            </span>
+            <span id="text2">
+                Day
+            </span>
+        </div>
     </div>
     <form class="box" id="inputForm">
         <input type="text" id="n" placeholder="Quante palline vuoi generare?" min="10000" required>
