@@ -40,62 +40,30 @@
     <!-- Titolo -->
     <title>PiGreco Day</title>
     <!-- Caricamento css locale -->
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <!-- Caricamento librerie p5 -->
     <script src="libraries/p5.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
-    <!-- Caricamento jquery CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Caricamento jquery locale-->
+    <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Caricamento js locale -->
-    <script src="main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <link href="css/canvas.css" rel="stylesheet" type="text/css">
 </head>
-<style>
-    canvas {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    
-    @media (max-width: 375px) {
-        canvas {
-            margin-top: 450px;
-        }
-        h2 {
-            margin-top: -580px;
-            text-align: center !important;
-        }
-    }
-    
-    @media (min-width: 376px) and (max-width: 790px) {
-        canvas {
-            margin-top: 450px;
-        }
-        h2 {
-            margin-top: -580px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-    }
-    
-    @media (min-width: 800px) {
-        canvas {
-            margin-top: 450px;
-        }
-        h2 {
-            margin-top: -580px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-    }
-</style>
+
 
 <body>
+    <div class="title">
+        <span id="text1">
+            Pi
+        </span>
+        <span id="text2">
+            Day
+        </span>
+    </div>
     <form class="box" id="inputForm">
-        <h3>Calcolo del Pi Greco tramite metodo Monte Carlo</h3>
-        <input type="text" id="n" placeholder="Quanti punti vuoi generare?" min="10000" required>
+        <input type="text" id="n" placeholder="Quante palline vuoi generare?" min="10000" required>
         <input type="button" value="Invio" id="submitButton">
         <input type="button" value="Reset" id="resetButton">
     </form>

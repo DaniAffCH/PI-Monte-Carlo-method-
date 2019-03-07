@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Major+Mono+Display');
+
+body {
+    background-color: #1f2833;
+}
+
+.title {
+    margin: auto;
+    width: 100%;
+    height: 60%;
+    align-self: center;
+    padding: 3% 0% 3%;
+    margin-bottom: 10%;
+}
+
+.title span {
+    font-size: 200px;
+    font-family: 'Major Mono Display', monospace;
+    margin: 20% 0% 20% 15%;
+    letter-spacing: -20px;
+}
+
+.title #text1 {
+    color: #f166fc;
+    font-weight: 50;
+    animation: text1 1.5s 1;
+}
+
+.title #text2 {
+    margin-left: 0%;
+    color: 	#66fcf1;
+    font-weight: 50;
+    animation: text2 1.5s 1;
+}
+
+@keyframes text1 {
+    0%{
+        margin-right: -32%;
+        opacity: 100%;
+    }
+}
+
+@keyframes text2 {
+    0%{
+        letter-spacing: -50px;
+        color: rgba(83,97,201, 0.3);
+        position: relative;
+    }
+}
+
+.intro {
+    float: left;
+    width: 100%;
+    margin: auto auto 10% auto;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+}
+
+.intro h1{
+    width: 80%;
+    font-size: 50px;
+    color: #66fcf1;
+}
+
+.intro p{
+    width: 60%;
+    margin-left: 3%;
+    padding: 2% auto auto 3%;
+    font-size: 28px;
+    float: left;
+}
+
+a{
+    color: #f166fc;
+    text-decoration: none;
+}
+
+.intro img{
+    margin-top: -5%;
+    margin-right: auto;
+    width: 37%;
+    float: right;
+    transform:  scale(0.6);
+    opacity: 0.8;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.intro img:hover{
+   opacity: 1;
+   transform: scale(0.8);
+}
+
+.storia {
+    float: right;
+    width: 100%;
+    margin: -10% auto 10% auto;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+}
+
+.storia h1{
+    margin-left: 60%;
+    float: right;
+    width: 35%;
+    font-size: 50px;
+    color: #66fcf1;
+}
+
+.storia p{
+    align-content: center;
+    width: 50%;
+    margin-left: 3%;
+    padding: auto 0% auto auto;
+    font-size: 28px;
+    float: right;
+    align-content: center;
+}
+
+.storia img{
+    margin: 5% auto auto -14%;
+    width: 40%;
+    float: left;
+    transform:  scale(0.9);
+    opacity: 1;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+.storia img:hover{
+    margin-left: 1%;
+    opacity: 1;
+    transform: scale(1.3);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+ }

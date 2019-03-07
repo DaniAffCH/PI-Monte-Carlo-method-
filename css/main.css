@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Major+Mono+Display');
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #000000;
+    background-color: #1f2833;
 }
 
 h2 {
-    color: white;
+    color: rgb(0, 255, 0);
     text-transform: uppercase;
+    font-family: 'Major Mono Display', monospace;
     font-weight: 500;
+    font-size: 200%;
     position: relative;
-    margin-top: -120px;
+    margin-top: 10% auto 10%;
     text-align: center;
 }
 
@@ -46,9 +49,9 @@ a {
         padding: 40px;
         margin-left: 10px;
         position: absolute;
-        top: 5%;
+        top: 0%;
         /* transform: translate(-50%, -50%); */
-        background: #191919;
+        background: #192029;
         text-align: center;
         border-radius: 100px;
     }
@@ -62,7 +65,7 @@ a {
         position: absolute;
         top: 5%;
         /* transform: translate(-50%, -50%); */
-        background: #191919;
+        background: #192029;
         text-align: center;
         border-radius: 100px;
     }
@@ -76,7 +79,7 @@ a {
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #191919;
+        background: #192029;
         text-align: center;
         border-radius: 100px;
         margin-bottom: 40px;
@@ -91,7 +94,7 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #191919;
+        background: #192029;
         text-align: center;
         border-radius: 100px;
         margin-bottom: 40px;
@@ -106,7 +109,21 @@ a {
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #191919;
+        background: #192029;
+        text-align: center;
+        border-radius: 100px;
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .box {
+        width: 400px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #192029;
         text-align: center;
         border-radius: 100px;
         margin-bottom: 40px;
@@ -136,7 +153,7 @@ a {
 
 .box input[type="text"]:focus {
     width: 280px;
-    border-color: #2ecc71;
+    border-color: #66fcf1;
 }
 
 .box input[type="button"] {
@@ -145,7 +162,7 @@ a {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    border: 2px solid #66fcf1;
     padding: 14px 40px;
     outline: none;
     color: white;
@@ -155,6 +172,49 @@ a {
 }
 
 .box input[type="button"]:hover {
-    background: #2ecc71;
+    background: #66fcf1;
     transition: 0.50s;
+}
+.title {
+    margin: auto;
+    width: 100%;
+    height: 60%;
+    align-self: center;
+    padding: 3% 0% 3%;
+    margin-bottom: 10%;
+}
+
+.title span {
+    font-size: 200px;
+    font-family: 'Major Mono Display', monospace;
+    margin: 20% 0% 20% 30%;
+    letter-spacing: -20px;
+}
+
+.title #text1 {
+    color: #f166fc;
+    font-weight: 50;
+    animation: text1 1.5s 1;
+}
+
+.title #text2 {
+    margin-left: 0%;
+    color: 	#66fcf1;
+    font-weight: 50;
+    animation: text2 1.5s 1;
+}
+
+@keyframes text1 {
+    0%{
+        margin-right: -32%;
+        opacity: 100%;
+    }
+}
+
+@keyframes text2 {
+    0%{
+        letter-spacing: -50px;
+        color: rgba(83,97,201, 0.3);
+        position: relative;
+    }
 }
