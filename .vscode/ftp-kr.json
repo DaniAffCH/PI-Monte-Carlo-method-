@@ -1,0 +1,16 @@
+{
+    "host": "ftp.ruffinifablab.it",
+    "username": "9782108@aruba.it",
+    "password": "15Ab1000",
+    "remotePath": "www.ruffinifablab.it/piday2019/5cs",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

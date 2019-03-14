@@ -37,6 +37,8 @@ function draw() {
             data.total = !isNaN(inputBox.val()) ? inputBox.val() * multiplier : location.reload();
             if (data.total < 10000) {
                 data.total = null;
+                $("#resetButton").show();
+                $("#submitButton").hide();
                 stopall("Inserisci un valore di almeno 100");
             }
             $("#resetButton").show();
